@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://venerable-snickerdoodle-ab1d83.netlify.app/sitemap.xml

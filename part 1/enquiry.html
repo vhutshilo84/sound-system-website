@@ -4,12 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ask M's Sound Factory about audio equipment and solutions.">
-    <title>Enquiry | M's Sound Factory</title>
+    <meta name="description" content="Send an enquiry to M's Sound Factory about audio equipment and event sound solutions in Polokwane, Limpopo.">
+    <meta name="theme-color" content="#100d1d">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Enquire About Event Sound | M's Sound Factory">
+    <meta property="og:description" content="Tell M's Sound Factory what audio equipment or event sound solution you need in Polokwane, Limpopo.">
+    <title>Enquire About Event Sound | M's Sound Factory</title>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; media-src 'self'; frame-src https://maps.google.com; form-action 'self' mailto:; base-uri 'self'; object-src 'none'; upgrade-insecure-requests">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
 </head>
 
-<body>
+<body id="top">
     <video class="site-background-video" autoplay muted loop playsinline preload="metadata" poster="images/speaker.jpeg" aria-hidden="true" tabindex="-1">
         <source src="images/background-video.mp4" type="video/mp4">
     </video>
@@ -34,28 +40,42 @@
         </section>
 
         <section class="form-card" aria-label="Enquiry form">
-            <form action="submit_enquiry.php" method="POST">
+            <form action="mailto:M'ssound@gmail.com" method="post" enctype="text/plain" data-form-purpose="enquiry">
                 <label for="name">Full name</label>
-                <input type="text" id="name" name="name" autocomplete="name" required>
+                <input type="text" id="name" name="name" autocomplete="name" minlength="2" maxlength="80" required>
 
                 <label for="email">Email address</label>
-                <input type="email" id="email" name="email" autocomplete="email" required>
+                <input type="email" id="email" name="email" autocomplete="email" maxlength="254" required>
 
-                <label for="subject">What is your enquiry about?</label>
-                <input type="text" id="subject" name="subject" required>
+                <label for="phone">Phone number</label>
+                <input type="tel" id="phone" name="phone" autocomplete="tel" pattern="(?=(?:.*[0-9]){7})[+]?[0-9 ()-]{7,20}" title="Enter at least 7 digits; you may include a leading +, spaces, parentheses, or hyphens." required>
 
-                <label for="message">Additional details</label>
-                <textarea id="message" name="message" rows="6" required></textarea>
+                <label for="enquiry-type">What are you enquiring about?</label>
+                <select id="enquiry-type" name="enquiryType" required>
+                    <option value="" selected disabled>Select an enquiry type</option>
+                    <option value="Event sound services">Event sound services</option>
+                    <option value="Audio equipment">Audio equipment</option>
+                    <option value="Volunteer opportunity">Volunteer opportunity</option>
+                    <option value="Sponsorship">Sponsorship</option>
+                </select>
+
+                <label for="event-date">Event date (if applicable)</label>
+                <input type="date" id="event-date" name="eventDate">
+
+                <label for="message">Tell us what you need</label>
+                <textarea id="message" name="message" rows="6" minlength="15" maxlength="2000" required></textarea>
 
                 <button class="button" type="submit">Send enquiry</button>
+                <p class="form-response" data-form-response role="status" aria-live="polite"></p>
             </form>
         </section>
     </main>
 
     <footer class="site-footer">
         <div class="site-footer-inner">
-            <p>&copy; 2026 M's Sound Factory</p>
+            <p>&copy; <span data-current-year></span> M's Sound Factory</p>
             <p>Made for better listening.</p>
+            <button class="back-to-top" type="button">Back to top ↑</button>
         </div>
     </footer>
 </body>

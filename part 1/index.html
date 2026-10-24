@@ -4,12 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Discover audio equipment and sound solutions from M's Sound Factory.">
-    <title>M's Sound Factory | Home</title>
+    <meta name="description" content="Discover event sound services, quality audio equipment and sound solutions from M's Sound Factory in Polokwane, Limpopo.">
+    <meta name="theme-color" content="#100d1d">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Event Sound &amp; Audio Equipment | M's Sound Factory">
+    <meta property="og:description" content="Explore event sound services, quality audio equipment and sound solutions in Polokwane, Limpopo.">
+    <title>Event Sound &amp; Audio Equipment | M's Sound Factory</title>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; media-src 'self'; frame-src https://maps.google.com; form-action 'self'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
 </head>
 
-<body>
+<body id="top">
     <video class="site-background-video" autoplay muted loop playsinline preload="metadata" poster="images/speaker.jpeg" aria-hidden="true" tabindex="-1">
         <source src="images/background-video.mp4" type="video/mp4">
     </video>
@@ -30,11 +36,11 @@
         <section class="hero">
             <div class="hero-copy">
                 <p class="eyebrow">Sound that brings people together</p>
-                <h1>Find your sound.</h1>
-                <p class="lead">M's Sound Factory is here to help you explore quality audio equipment and solutions for your space.</p>
+                <h1>Event sound and audio solutions in Polokwane.</h1>
+                <p class="lead">M's Sound Factory helps people in Polokwane and Limpopo find quality audio equipment and sound solutions for events, homes, work and community spaces.</p>
                 <a class="button" href="services.html">Explore our services</a>
             </div>
-            <img class="hero-image" src="images/speaker.jpeg" alt="Professional black PA speaker">
+            <img class="hero-image" src="images/speaker.jpeg" alt="Professional black PA speaker for event sound" fetchpriority="high" decoding="async">
         </section>
 
         <section class="content-section">
@@ -62,8 +68,9 @@
 
     <footer class="site-footer">
         <div class="site-footer-inner">
-            <p>&copy; 2026 M's Sound Factory</p>
+            <p>&copy; <span data-current-year></span> M's Sound Factory</p>
             <p>Made for better listening.</p>
+            <button class="back-to-top" type="button">Back to top ↑</button>
         </div>
     </footer>
 </body>

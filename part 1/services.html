@@ -4,12 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore the audio equipment and sound solutions offered by M's Sound Factory.">
-    <title>Services | M's Sound Factory</title>
+    <meta name="description" content="Explore audio equipment, sound guidance and event sound services from M's Sound Factory in Polokwane and Limpopo.">
+    <meta name="theme-color" content="#100d1d">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Sound Equipment &amp; Event Audio Services | M's Sound Factory">
+    <meta property="og:description" content="Find audio equipment, sound guidance and event sound services in Polokwane, Limpopo.">
+    <title>Sound Equipment &amp; Event Audio Services | M's Sound Factory</title>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; media-src 'self'; frame-src https://maps.google.com; form-action 'self'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
 </head>
 
-<body>
+<body id="top">
     <video class="site-background-video" autoplay muted loop playsinline preload="metadata" poster="images/speaker.jpeg" aria-hidden="true" tabindex="-1">
         <source src="images/background-video.mp4" type="video/mp4">
     </video>
@@ -40,32 +46,45 @@
                 <p>Watch our video to get a closer look at the sound and energy we bring to every event.</p>
             </div>
             <div class="service-video-frame">
-                <video controls playsinline preload="metadata" poster="images/speaker.jpeg">
+                <video controls playsinline preload="none" poster="images/speaker.jpeg">
                     <source src="images/services-showcase.mp4" type="video/mp4">
                     Your browser does not support embedded video.
                 </video>
             </div>
         </section>
 
-        <section class="card-grid" aria-label="Our services">
-            <article class="card">
-                <span class="card-mark" aria-hidden="true">01</span>
-                <h2>Audio equipment</h2>
-                <p>Explore quality sound equipment for your home, work or community space.</p>
-            </article>
-            <article class="card">
-                <span class="card-mark" aria-hidden="true">02</span>
-                <h2>Sound guidance</h2>
-                <p>Get help understanding your options and choosing audio solutions that suit your needs.</p>
-            </article>
-            <article class="card">
-                <span class="card-mark" aria-hidden="true">03</span>
-                <h2>Customer support</h2>
-                <p>Reach out with questions or ask us about the products and services we offer.</p>
-            </article>
+        <section class="service-browser content-section" aria-labelledby="service-browser-heading">
+            <div class="service-browser-heading">
+                <p class="eyebrow">Find the right fit</p>
+                <h2 id="service-browser-heading">Browse our services.</h2>
+            </div>
+            <div class="service-filters">
+                <div>
+                    <label for="service-search">Search services</label>
+                    <input type="search" id="service-search" placeholder="Try “equipment” or “support”">
+                </div>
+                <div>
+                    <label for="service-category">Category</label>
+                    <select id="service-category">
+                        <option value="all">All categories</option>
+                        <option value="equipment">Equipment</option>
+                        <option value="guidance">Guidance</option>
+                        <option value="support">Support</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="service-sort">Sort by</label>
+                    <select id="service-sort">
+                        <option value="az">Name: A to Z</option>
+                        <option value="za">Name: Z to A</option>
+                    </select>
+                </div>
+            </div>
+            <p class="service-results-status" id="service-results-status" role="status" aria-live="polite"></p>
+            <div class="card-grid" id="service-results" aria-label="Filtered services"></div>
         </section>
 
-        <section class="content-section">
+        <section class="content-section" data-reveal>
             <div class="info-card">
                 <h2>Have a question?</h2>
                 <p>Tell us what you’re looking for and we’ll help you take the next step.</p>
@@ -76,8 +95,9 @@
 
     <footer class="site-footer">
         <div class="site-footer-inner">
-            <p>&copy; 2026 M's Sound Factory</p>
+            <p>&copy; <span data-current-year></span> M's Sound Factory</p>
             <p>Made for better listening.</p>
+            <button class="back-to-top" type="button">Back to top ↑</button>
         </div>
     </footer>
 </body>

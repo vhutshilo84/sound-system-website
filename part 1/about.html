@@ -4,12 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Learn how M's Sound Factory brings events to life with quality sound and professional service.">
-    <title>About | M's Sound Factory</title>
+    <meta name="description" content="Meet M's Sound Factory, providing quality event sound and audio solutions for weddings, parties and functions in Polokwane, Limpopo.">
+    <meta name="theme-color" content="#100d1d">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="About M's Sound Factory | Polokwane Event Sound">
+    <meta property="og:description" content="Learn about our event sound services and audio solutions in Polokwane, Limpopo.">
+    <title>About M's Sound Factory | Polokwane Event Sound</title>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; media-src 'self'; frame-src https://maps.google.com; form-action 'self'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
 </head>
 
-<body>
+<body id="top">
     <video class="site-background-video" autoplay muted loop playsinline preload="metadata" poster="images/speaker.jpeg" aria-hidden="true" tabindex="-1">
         <source src="images/background-video.mp4" type="video/mp4">
     </video>
@@ -33,14 +39,18 @@
             <p class="lead">At M's Sound Factory, we believe that great sound creates unforgettable experiences. We specialise in providing quality sound system services to make every occasion exciting, memorable, and full of energy.</p>
         </section>
 
-        <section class="about-gallery" aria-label="Our sound and event setup">
+        <section class="about-gallery" aria-label="Our sound and event setup" data-reveal>
             <figure class="about-image-feature">
-                <img src="images/about-event.jpeg" alt="A vibrant room filled with colorful speakers and event lighting">
+                <button class="gallery-trigger" type="button" data-lightbox data-caption="Setting the scene for unforgettable sound." aria-label="View the event setup image">
+                    <img src="images/about-event.jpeg" alt="Colorful speakers and event lighting at an event sound setup in Polokwane" loading="lazy" decoding="async">
+                </button>
                 <figcaption>Setting the scene for unforgettable sound.</figcaption>
             </figure>
 
             <figure class="about-image-feature">
-                <img src="images/best-in-town.jpeg" alt="A colorful stack of illuminated speakers for an event">
+                <button class="gallery-trigger" type="button" data-lightbox data-caption="Best in town." aria-label="View the speaker setup image">
+                    <img src="images/best-in-town.jpeg" alt="A stack of illuminated speakers prepared for an event" loading="lazy" decoding="async">
+                </button>
                 <figcaption>Best in town.</figcaption>
             </figure>
         </section>
@@ -67,7 +77,26 @@
             </section>
         </div>
 
-        <section class="content-section info-card">
+        <section class="content-section faq-section" aria-labelledby="faq-heading" data-reveal>
+            <p class="eyebrow">Quick answers</p>
+            <h2 id="faq-heading">Frequently asked questions</h2>
+            <div class="faq-list" data-accordion>
+                <details class="faq-item">
+                    <summary>What types of events do you support?</summary>
+                    <p>We provide sound solutions for weddings, birthdays, corporate functions, parties, and other events.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Can you help me choose the right sound setup?</summary>
+                    <p>Yes. Send us your requirements through the enquiry form and we can help you explore suitable options.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>How can I request a quotation?</summary>
+                    <p>Use the contact or enquiry form and include details about your event and sound requirements.</p>
+                </details>
+            </div>
+        </section>
+
+        <section class="content-section info-card" data-reveal>
             <h2>Let's make your event unforgettable!</h2>
             <p>Contact us today to discuss your event requirements and get a quotation.</p>
             <a class="button" href="contact.html">Contact us</a>
@@ -76,8 +105,9 @@
 
     <footer class="site-footer">
         <div class="site-footer-inner">
-            <p>&copy; 2026 M's Sound Factory</p>
+            <p>&copy; <span data-current-year></span> M's Sound Factory</p>
             <p>Made for better listening.</p>
+            <button class="back-to-top" type="button">Back to top ↑</button>
         </div>
     </footer>
 </body>

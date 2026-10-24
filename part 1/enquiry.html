@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ask M's Sound Factory about audio equipment and solutions.">
+    <title>Enquiry | M's Sound Factory</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <video class="site-background-video" autoplay muted loop playsinline preload="metadata" poster="images/speaker.jpeg" aria-hidden="true" tabindex="-1">
+        <source src="images/background-video.mp4" type="video/mp4">
+    </video>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html">M's <span>Sound Factory</span></a>
+            <nav class="site-nav" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="enquiry.html" aria-current="page">Enquiry</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-intro">
+            <p class="eyebrow">Enquiries</p>
+            <h1>How can we help?</h1>
+            <p class="lead">Tell us what you’re looking for and we’ll be in touch.</p>
+        </section>
+
+        <section class="form-card" aria-label="Enquiry form">
+            <form action="submit_enquiry.php" method="POST">
+                <label for="name">Full name</label>
+                <input type="text" id="name" name="name" autocomplete="name" required>
+
+                <label for="email">Email address</label>
+                <input type="email" id="email" name="email" autocomplete="email" required>
+
+                <label for="subject">What is your enquiry about?</label>
+                <input type="text" id="subject" name="subject" required>
+
+                <label for="message">Additional details</label>
+                <textarea id="message" name="message" rows="6" required></textarea>
+
+                <button class="button" type="submit">Send enquiry</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="site-footer-inner">
+            <p>&copy; 2026 M's Sound Factory</p>
+            <p>Made for better listening.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact M's Sound Factory with your questions.">
+    <title>Contact | M's Sound Factory</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <video class="site-background-video" autoplay muted loop playsinline preload="metadata" poster="images/speaker.jpeg" aria-hidden="true" tabindex="-1">
+        <source src="images/background-video.mp4" type="video/mp4">
+    </video>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html">M's <span>Sound Factory</span></a>
+            <nav class="site-nav" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="enquiry.html">Enquiry</a>
+                <a href="contact.html" aria-current="page">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-intro">
+            <p class="eyebrow">Contact</p>
+            <h1>Let's talk sound.</h1>
+            <p class="lead">Send us a message and we’ll get back to you.</p>
+        </section>
+
+        <div class="split-layout">
+            <section class="form-card" aria-label="Contact form">
+                <form action="submit_contact.php" method="POST">
+                    <label for="name">Full name</label>
+                    <input type="text" id="name" name="name" autocomplete="name" required>
+
+                    <label for="email">Email address</label>
+                    <input type="email" id="email" name="email" autocomplete="email" required>
+
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="6" required></textarea>
+
+                    <button class="button" type="submit">Send message</button>
+                </form>
+            </section>
+
+            <aside class="info-card">
+                <h2>Other ways to reach us</h2>
+                <p><strong>Email</strong><br><a href="mailto:M'ssound@gmail.com">M'ssound@gmail.com</a></p>
+                <p><strong>Phone</strong><br><a href="tel:+27123456789">+27 12 345 6789</a></p>
+                <p><strong>Address</strong><br>20 Fitzpatric Street, Polokwane, Limpopo</p>
+            </aside>
+        </div>
+
+        <section class="map-section content-section" aria-labelledby="map-heading">
+            <h2 id="map-heading">Find us</h2>
+            <div class="map-frame">
+                <iframe
+                    src="https://maps.google.com/maps?q=20%20Fitzpatric%20Street%2C%20Polokwane%2C%20Limpopo&z=18&output=embed"
+                    title="Map showing 20 Fitzpatric Street, Polokwane, Limpopo"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <a class="map-link" href="https://www.google.com/maps/dir/?api=1&amp;destination=20%20Fitzpatric%20Street%2C%20Polokwane%2C%20Limpopo" target="_blank" rel="noopener noreferrer">Get directions to this location</a>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="site-footer-inner">
+            <p>&copy; 2026 M's Sound Factory</p>
+            <p>Made for better listening.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
